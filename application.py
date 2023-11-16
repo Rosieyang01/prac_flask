@@ -18,7 +18,7 @@ def login():
     return render_template("login.html")
 
 
-@application.route("/login_confirm", methods = ['POST'])
+@application.route("/login_confirm", methods=['POST'])
 def login_user():
     id_ = request.form['id']
     pw = request.form['pw']
@@ -36,19 +36,20 @@ def signup():
     return render_template("signup.html")
 
 
-@application.route("/signup_post", methods = ['POST'])
+@application.route("/signup_post", methods=['POST'])
 def register_user():
     data = request.form
     pw = request.form['pw']
     pw_hash = hashlib.sha256(pw.encode('utf-8')).hexdigest()
     if DB.insert_user(data, pw_hash):
         return render_template("login.html")
-                        
-                        
+
+
 @application.route("/logout")
 def logout_user():
     session.clear()
     return redirect(url_for('view_list'))
+
 
 @application.route("/list")
 def view_list():
