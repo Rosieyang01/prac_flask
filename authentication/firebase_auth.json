@@ -1,0 +1,9 @@
+{
+  "apiKey": "AIzaSyCjunu5O_JMuxewYLTvOAovhzTAZfjGStc",
+  "authDomain": "pracflask.firebaseapp.com",
+  "databaseURL": "https://pracflask-default-rtdb.firebaseio.com",
+  "projectId": "pracflask",
+  "storageBucket": "pracflask.appspot.com",
+  "messagingSenderId": "3907133708",
+  "appId": "1:3907133708:web:2741832fce667bfadba929"
+}
